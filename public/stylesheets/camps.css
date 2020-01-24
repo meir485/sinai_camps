@@ -1,0 +1,22 @@
+img{
+	border-bottom: 2px solid black; 
+    height:150px ;
+	width: 100%;
+}
+
+img:hover {
+	height:280px ;
+	width: 100%;	
+
+		}
+.imgHolder{
+	display: inline-block;
+	border: 5px solid red; 
+    height:280px ;
+	width: 25%;
+}
+.imgReel{
+	padding: 0px
+	margin-right:15%; 
+	margin-left:15%;
+}	

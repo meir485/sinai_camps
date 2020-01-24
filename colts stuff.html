@@ -1,0 +1,15 @@
+ 
+
+//campgrounds.ejs
+
+ <% campgrounds.forEach(function(camp){ %>
+    <div>
+    	<h4><%= camp.name %></h4>
+    	<img src="<%=camp.image%>"> 
+    </div>
+	    
+ <% }) %>
+
+
+ header.ejs
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
