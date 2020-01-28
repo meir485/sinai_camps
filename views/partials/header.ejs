@@ -8,9 +8,13 @@
     </head>
     <body>
     <ul>
-    	<li><a href="/login">login</a></li>
-    	<li><a href="/register">sign up</a></li>
-    	<li><a href="/logout">logout</a></li>
+<% if(!currentUser){ %>
+             <li><a href="/login">login</a></li>
+    	     <li><a href="/register">sign up</a></li>
+     <% } else { %>
+            <li>signed as <%=currentUser.username%></a></li>
+    	    <li><a href="/logout">logout</a></li>
+    	<% } %>
     </ul>   
     
     

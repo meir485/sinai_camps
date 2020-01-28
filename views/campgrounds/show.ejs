@@ -2,16 +2,29 @@
 
 <h1>show treeee</h1>
 <p><%=campground.name%></p>
+<p>by : <%=campground.author.username%></p>
 <img src="<%=campground.image%>">
 <p><%=campground.description%></p>
 
 <% campground.comments.forEach(function(comment){ %>
-	<p>
-		<strong><%= comment.author %></strong> - <%= comment.text %>
-	</p>
+	<div>
+		<strong><%= comment.author.username %></strong> - <%= comment.text %>
+		<% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+		<a href="/campgrounds/<%= campground._id%>/comments/<%= comment._id%>/edit"><button class="editButton">edit</button></a>
+		<form action="/campgrounds/<%= campground._id%>/comments/<%= comment._id%>?_method=DELETE" method=POST>
+			<button class="deleteButton">delete</button>
+		</form>
+		<% } %>
+	</div>
 	
 <%})%>
+<% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+     <a href="/campgrounds/<%= campground._id%>/edit"><button class="editButton">edit</button> </a>
+<form id="deleteForm" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+	<button class="deleteButton">delete</button>
+</form>
+<% } %>
 <p>
-     <a href="/campgrounds/<%= campground._id%>/comments/new">add new comment</a>
+     <a href="/campgrounds/<%=campground._id%>/comments/new">add new comment</a>
 </p>
 <%- include("../partials/footer") %>

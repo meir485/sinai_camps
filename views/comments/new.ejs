@@ -3,7 +3,6 @@
 <h1>create new comment to <%= campground.name %> </h1>
 
 <form action="/campgrounds/<%=campground._id%>/comments" method="POST">
-	<input type="text" placeholder="author" name="comment[author]">
 	<input type="text" placeholder="text" name="comment[text]">
 	<button>submit</button>
 </form>
