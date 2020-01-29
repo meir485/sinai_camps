@@ -1,47 +1,25 @@
 <%- include("../partials/header") %>
 
 <style>
-    img{
-	border-bottom: 2px solid black; 
-    height:50%;
-	width: 50%;
-}
-
-img:hover {
-	height:280px ;
-	width: 100%;	
-
-		}
-.imgHolder{
-
-    height:280px ;
-    width: 280px;
-	border: 5px solid red; 
-    
-	
-}
-.imgReel{
-	display: grid;
-  grid-template-columns: auto auto auto;
-  
-  padding: 100px;
-}	
+    }	
 </style>
 <a href="/campgrounds/new">make new camp</a>
 <h1> dA campsss page</h1>
-
+<div id = "container">
+    
+</div>
 <div class="imgReel">
 <% campgrounds.forEach(function(camp){ %>
 
-<span class="imgHolder">
-    	<img src="<%=camp.image%>"> 
+<div class="imgHolder">
+    	<img id="imgin" src="<%=camp.image%>"> 
     	  <div>
-    		<h4><%= camp.name %></h4>
+    		<h4 style="font-size:1vw;"><%= camp.name %></h4>
     		<p>
-                <a href="/campgrounds/<%= camp._id%>">more info</a>
+                <a href="/campgrounds/<%= camp._id%>" style="font-size:1vw;">more info</a>
     		</p>
     	  </div>
-</span>
+</div>
 
 <% }) %>
 </div>

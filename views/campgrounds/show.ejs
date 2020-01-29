@@ -1,7 +1,6 @@
 <%- include("../partials/header") %>
-
-<h1>show treeee</h1>
-<p><%=campground.name%></p>
+<div id="container">
+<h1><%=campground.name%></h1>
 <p>by : <%=campground.author.username%></p>
 <img src="<%=campground.image%>">
 <p><%=campground.description%></p>
@@ -27,4 +26,6 @@
 <p>
      <a href="/campgrounds/<%=campground._id%>/comments/new">add new comment</a>
 </p>
+</div>
+
 <%- include("../partials/footer") %>
