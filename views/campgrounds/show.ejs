@@ -1,7 +1,12 @@
 <%- include("../partials/header") %>
 <div id="container">
-<h1><%=campground.name%></h1>
-<p>by : <%=campground.author.username%></p>
+	<span>
+		<h1 class="line" id="left"><%=campground.name%></h1>
+        <p class="line" id="right">by : <%=campground.author.username%></p>
+	
+	</span>
+		
+
 <img src="<%=campground.image%>">
 <p><%=campground.description%></p>
 

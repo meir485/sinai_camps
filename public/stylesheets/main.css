@@ -1,12 +1,14 @@
 body{
-	background-color: pink
+   background: url("https://previews.123rf.com/images/allexxandar/allexxandar1806/allexxandar180600623/103737657-grunge-egypt-flag-egyptian-flag-with-grunge-texture-brush-stroke-.jpg") repeat;
 }
 button{
 	border-radius: 15px;
 }
 p,h4,a{
+	color: #57ba43;
 	margin: 0;
 }
+
 a,form,button{
 	display: inline;
 }
@@ -20,6 +22,19 @@ a,form,button{
 
 .deleteButton{
     background-color: red;
+}
+.info{
+	background-color: #3e453d;
+}
+.line{
+	display:inline-block;
+	 
+}
+#right{
+   float: right;
+}
+#left{
+   float: left;
 }
 #imgin{
 	border-bottom: 2px solid black; 
@@ -36,18 +51,53 @@ a,form,button{
 		}
 .imgHolder{
 
-    
     width: 100% ;
 	border: 1px solid red; 
     
 	
 }
 .imgReel{
-    background-color: white;
+    /*background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=60); */
     margin: 0 17% 0;
 	display: grid;
   grid-template-columns: auto auto auto; 
 }
 #container{
+	
 	margin: 0 17% 0;
+	text-align: center;
+}
+
+input{
+	display:block;
+	margin: 1px auto;
+}
+/*navbarrr*/
+ul{
+	height: 3em;
+     background-color:  #faea07;
+	list-style-type: none;
+	margin: 0;
+	margin-bottom: 3px;
+  padding: 0;
+}
+li{
+  float: left;
+	display: block;
+  text-align: center;
+  text-decoration: none;
+	padding: 1em;
+	background-color: black;
+    margin: 1px;
+}
+
+.opening{
+	text-align: center;
+}
+.footer{
+	position: absolute;
+	bottom: 10px; 
+	text-align: center;
 }

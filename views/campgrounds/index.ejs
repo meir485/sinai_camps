@@ -1,27 +1,26 @@
 <%- include("../partials/header") %>
 
-<style>
-    }	
-</style>
-<a href="/campgrounds/new">make new camp</a>
-<h1> dA campsss page</h1>
-<div id = "container">
-    
-</div>
-<div class="imgReel">
-<% campgrounds.forEach(function(camp){ %>
 
-<div class="imgHolder">
+<a href="/campgrounds/new">make new camp</a>
+
+
+<div id = "container">
+
+  <div class="imgReel">
+  <% campgrounds.forEach(function(camp){ %>
+
+    <div class="imgHolder">
     	<img id="imgin" src="<%=camp.image%>"> 
     	  <div>
     		<h4 style="font-size:1vw;"><%= camp.name %></h4>
     		<p>
-                <a href="/campgrounds/<%= camp._id%>" style="font-size:1vw;">more info</a>
+                <a href="/campgrounds/<%= camp._id%>" style="font-size:1vw;"><button class="info">more info</button> </a>
     		</p>
     	  </div>
-</div>
+    </div>
 
-<% }) %>
+  <% }) %>
+  </div>
 </div>
 
 
